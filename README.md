@@ -1,4 +1,5 @@
-1. react-native-fauth1. Clone MaMa Project từ gitlab.
+#Project setup and initialization
+1. react-native-fauth. Clone MaMa Project từ gitlab.
 2. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i để cài đặt node_modules
 3. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i react-native-fauth để cài đặt thư viện react-native-fauth.
 4. Mở Terminal tại folder Mama vừa clone về, sau đó react-native link.
@@ -26,8 +27,8 @@
         super.onActivityResult(requestCode, resultCode, data);
         MainApplication.getCallbackManager().onActivityResult(requestCode, resultCode, data);
 +  if (resultCode == RESULT_OK && requestCode == RNReactNativeFauthModule.REQUEST_CODE) {
-      +      if (data.getBooleanExtra("success", false)) {
-      +          WritableMap params = Arguments.createMap();
++      if (data.getBooleanExtra("success", false)) {
++          WritableMap params = Arguments.createMap();
       +          String json = data.getStringExtra("json");
       +          if (json != null) {
       +              params.putString("json", json);
