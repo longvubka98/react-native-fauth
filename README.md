@@ -1,7 +1,7 @@
 ## Project setup and initialization
 1.```npm i react-native-fauth```
 
-2.```react-native link```
+2.```react-native link react-native-fauth```
 
 ## Config
 1. In file AndroidManifest.xml  add command tools:replace="android:theme" at application.
