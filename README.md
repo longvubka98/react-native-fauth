@@ -2,11 +2,13 @@
 1.```react-native-fauth```
 
 2.```react-native link```
-5. Trong file AndroidManifest.xml  thêm tools:replace="android:theme" trong application.
+
+## Config
+1. In file AndroidManifest.xml  add command tools:replace="android:theme" at <application/>.
 ```
 <application tools:replace="android:theme" android:name="ai.ftech.mama.MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
 ```
-6. Trong file build.gradle (android/app/build.gradle), thêm câu lệnh manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ] vào trong phần defaultConfig
+2. In file build.gradle (android/app/build.gradle), add command manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ] at defaultConfig
   ```
   defaultConfig {
         applicationId "ai.ftech.mama"
@@ -17,7 +19,7 @@
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
-        manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ]
++        manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ]
     }
   ```
 7. Trong file MainActivity.java, Sửa phần void onActivityResult thêm các câu dòng lệnh 
