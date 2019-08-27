@@ -1,5 +1,5 @@
 ## Project setup and initialization
-1.```react-native-fauth```
+1.```npm i react-native-fauth```
 
 2.```react-native link```
 
