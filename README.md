@@ -1,4 +1,4 @@
-###Project setup and initialization
+# Project setup and initialization
 1. react-native-fauth. Clone MaMa Project từ gitlab.
 2. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i để cài đặt node_modules
 3. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i react-native-fauth để cài đặt thư viện react-native-fauth.
