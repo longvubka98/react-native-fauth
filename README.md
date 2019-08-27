@@ -1,8 +1,6 @@
-# Project setup and initialization
-1. react-native-fauth. Clone MaMa Project từ gitlab.
-2. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i để cài đặt node_modules
-3. Mở Terminal tại folder Mama vừa clone về, sau đó chạy lệnh npm i react-native-fauth để cài đặt thư viện react-native-fauth.
-4. Mở Terminal tại folder Mama vừa clone về, sau đó react-native link.
+## Project setup and initialization
+1.```react-native-fauth```
+4.```react-native link
 5. Trong file AndroidManifest.xml  thêm tools:replace="android:theme" trong application.
 ```
 <application tools:replace="android:theme" android:name="ai.ftech.mama.MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
