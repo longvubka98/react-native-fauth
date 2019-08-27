@@ -1,6 +1,6 @@
 ## Project setup and initialization
 1.```react-native-fauth```
-4.```react-native link
+4.```react-native link```
 5. Trong file AndroidManifest.xml  thêm tools:replace="android:theme" trong application.
 ```
 <application tools:replace="android:theme" android:name="ai.ftech.mama.MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
