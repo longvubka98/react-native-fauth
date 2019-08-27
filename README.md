@@ -21,11 +21,11 @@
     }
   ```
 7. Trong file MainActivity.java, Sửa phần void onActivityResult thêm các câu dòng lệnh 
-  ``` diff
+  ```diff
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         MainApplication.getCallbackManager().onActivityResult(requestCode, resultCode, data);
-      +  if (resultCode == RESULT_OK && requestCode == RNReactNativeFauthModule.REQUEST_CODE) {
++  if (resultCode == RESULT_OK && requestCode == RNReactNativeFauthModule.REQUEST_CODE) {
       +      if (data.getBooleanExtra("success", false)) {
       +          WritableMap params = Arguments.createMap();
       +          String json = data.getStringExtra("json");
