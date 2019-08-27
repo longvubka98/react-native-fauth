@@ -4,7 +4,7 @@
 2.```react-native link```
 
 ## Config
-1. In file AndroidManifest.xml  add command tools:replace="android:theme" at 'application'.
+1. In file AndroidManifest.xml  add command tools:replace="android:theme" at application.
 ```
 <application tools:replace="android:theme" android:name="ai.ftech.mama.MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:theme="@style/AppTheme">
 ```
@@ -22,7 +22,7 @@
 +        manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ]
     }
   ```
-7. Trong file MainActivity.java, Sửa phần void onActivityResult thêm các câu dòng lệnh 
+3. In file MainActivity.java, edit void onActivityResult add command 
   ```diff
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -45,4 +45,25 @@
 
     }
   ```
-  
+4. In file MainActivity.java, add void sendEvent
+```diff
++import com.facebook.react.bridge.Arguments;
++import com.facebook.react.bridge.ReactContext;
++import com.facebook.react.bridge.WritableMap;
++import com.facebook.react.modules.core.DeviceEventManagerModule;
++import com.ftech.auth.RNReactNativeFauthModule;
++import android.support.annotation.Nullable;
++import android.util.Log;
++import java.util.Objects;
+
+...
+
++ private void sendEvent(ReactContext reactContext,
++                               String eventName,
++                               @Nullable WritableMap params) {
++       reactContext
++                .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
++                .emit(eventName, params);
++    }
+```
+
