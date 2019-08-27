@@ -22,7 +22,7 @@
 +        manifestPlaceholders = [ 'appAuthRedirectScheme': 'mama.ftech.ai' ]
     }
   ```
-  and add command at android
+  and add command at android inside app/build.gradle
   ```diff
 +   compileOptions {
 +        sourceCompatibility JavaVersion.VERSION_1_8
