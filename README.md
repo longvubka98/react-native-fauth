@@ -66,4 +66,52 @@
 +                .emit(eventName, params);
 +    }
 ```
+## React-native code
+1. Import modules from react-native
+```diff
++ import {
++  NativeModules,
++  NativeEventEmitter,
++  DeviceEventEmitter,
++  Platform
++} from "react-native";
+```
+2. Add variable
+```diff
++ var FAuthenLib = NativeModules.RNReactNativeFauthModule;
++ var subscription;
+```
+3. Processing login function
+```diff
++ const oidc_issuer = "https://fid.ftech.ai"
++    const clientID = "mama_pkce"
++    const redirectURI = "mama.ftech.ai://callback"
++    const clientSecret = "c4903e14-f9b5-47ab-8ed4-83e073a5cb7c"
++    const scope = "mama fcall openid profile"
++    const authorizationEndpoint = "https://fid.ftech.ai/mama/connect/authorize"
++    const tokenEndpoint = "https://fid.ftech.ai/mama/connect/token"
++    FAuthenLib.showAuthenVC(
++      [oidc_issuer, clientID, redirectURI, clientSecret, scope, authorizationEndpoint, tokenEndpoint]);
+```
+4. Follow in componentDidMount()
+```diff
+componentDidMount() {
+...
++    if (Platform.OS == 'ios') {
++     const myModuleEvt = new NativeEventEmitter(NativeModules.RNReactNativeFauthModule)
++      subscription = myModuleEvt.addListener(
++        'onAuthenResult',
++        (data) => {
++          console.log("test_onAuthenResult 123: ", data)
++        }
++      );
++    } else {
++      subscription = DeviceEventEmitter.addListener(
++        'onAuthenResult',
++        data => {
++          console.log("onAuthenResult: ", data)
++        });
++    }
 
+  }
+```
