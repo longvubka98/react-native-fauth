@@ -31,7 +31,7 @@ If you have any question or issue, push it here! Have a good day!
 +   compileOptions {
 +        sourceCompatibility JavaVersion.VERSION_1_8
 +        targetCompatibility JavaVersion.VERSION_1_8
-    }
++    }
   ```
 3. In file MainActivity.java, edit void onActivityResult add command 
   ```diff
