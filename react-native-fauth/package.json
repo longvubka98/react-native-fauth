@@ -1,6 +1,6 @@
 {
-  "name": "react-native-react-native-fauth",
-  "version": "1.0.3",
+  "name": "react-native-fauth",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {

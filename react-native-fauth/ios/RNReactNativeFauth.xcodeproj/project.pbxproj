@@ -28,13 +28,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNReactNativeFauth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNReactNativeFauth.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4636E6092313D5D80027D128 /* FAuthenLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAuthenLib.swift; sourceTree = "<group>"; };
-		4636E60A2313D5D80027D128 /* AuthenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenVC.swift; sourceTree = "<group>"; };
-		4636E60B2313D5D80027D128 /* FAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAuthVC.swift; sourceTree = "<group>"; };
-		4636E60C2313D5D80027D128 /* AuthenFramework_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenFramework_Bridging_Header.h; sourceTree = "<group>"; };
-		4636E60D2313D5D80027D128 /* FAuthenLibBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAuthenLibBridge.m; sourceTree = "<group>"; };
-		4636E60E2313D5D80027D128 /* FUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUtils.swift; sourceTree = "<group>"; };
-		4636E6142313D7930027D128 /* RNReactNativeFauth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNReactNativeFauth-Bridging-Header.h"; sourceTree = "<group>"; };
+		4636E6092313D5D80027D128 /* FAuthenLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FAuthenLib.swift; path = RNFauth/FAuthenLib.swift; sourceTree = "<group>"; };
+		4636E60A2313D5D80027D128 /* AuthenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenVC.swift; path = RNFauth/AuthenVC.swift; sourceTree = "<group>"; };
+		4636E60B2313D5D80027D128 /* FAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FAuthVC.swift; path = RNFauth/FAuthVC.swift; sourceTree = "<group>"; };
+		4636E60C2313D5D80027D128 /* AuthenFramework_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenFramework_Bridging_Header.h; path = RNFauth/AuthenFramework_Bridging_Header.h; sourceTree = "<group>"; };
+		4636E60D2313D5D80027D128 /* FAuthenLibBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAuthenLibBridge.m; path = RNFauth/FAuthenLibBridge.m; sourceTree = "<group>"; };
+		4636E60E2313D5D80027D128 /* FUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FUtils.swift; path = RNFauth/FUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +58,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				4636E6142313D7930027D128 /* RNReactNativeFauth-Bridging-Header.h */,
 				4636E60C2313D5D80027D128 /* AuthenFramework_Bridging_Header.h */,
 				4636E60A2313D5D80027D128 /* AuthenVC.swift */,
 				4636E6092313D5D80027D128 /* FAuthenLib.swift */,
@@ -179,7 +177,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeFauth/RNReactNativeFauth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = RNReactNativeFauth/RNFauth/AuthenFramework_Bridging_Header;
 			};
 			name = Debug;
 		};
@@ -216,7 +214,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeFauth/RNReactNativeFauth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = RNReactNativeFauth/RNFauth/AuthenFramework_Bridging_Header;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -236,7 +234,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNReactNativeFauth;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeFauth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = RNReactNativeFauth/RNFauth/AuthenFramework_Bridging_Header;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -257,7 +255,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNReactNativeFauth;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNReactNativeFauth-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = RNReactNativeFauth/RNFauth/AuthenFramework_Bridging_Header;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
