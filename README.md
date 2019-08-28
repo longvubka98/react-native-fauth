@@ -1,5 +1,5 @@
 ![alt text](https://github.com/longvubka98/react-native-fauth/blob/master/logo.jpg)
-##Introduce
+## Introduce
 Welcome Ftecher! This libary using for login with FID in React-native.
 If you have any question or issue, push it here! Have a good day!
 ## Project setup and initialization
