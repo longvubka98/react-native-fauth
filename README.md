@@ -87,7 +87,7 @@ If you have any question or issue, push it here! Have a good day!
 +  Platform
 +} from "react-native";
 ```
-2. Add variable
+2. Add global variable
 ```diff
 + var FAuthenLib = NativeModules.RNReactNativeFauthModule;
 + var subscription;
