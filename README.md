@@ -1,3 +1,4 @@
+![alt text](https://github.com/longvubka98/react-native-fauth/blob/master/logo.jpg)
 ## Project setup and initialization
 1.```npm i react-native-fauth```
 
